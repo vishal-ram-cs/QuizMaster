@@ -1,4 +1,6 @@
+
 import express from 'express';
+
 import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -7,6 +9,9 @@ import morgan from 'morgan';
 import { connectDB } from './config/db.js';
 
 // --- Import Routes ---
+import quizRoutes from './routes/quizRoutes.js';
+
+
 import authRoutes from './routes/auth.js';
 import quizRoutes from './routes/quizzes.js';
 import attemptRoutes from './routes/attempts.js';
@@ -17,6 +22,7 @@ dotenv.config();
 const app = express();
 
 // --- Middlewares ---
+app.use('/api/quizzes', quizRoutes);
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json());
