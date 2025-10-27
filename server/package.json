@@ -4,11 +4,9 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "dev": "node --watch C:\\Users\\visha\\quizmaster\\server\\src\\index.js",
-    "start": "node C:\\Users\\visha\\quizmaster\\server\\src\\index.js",
-    "seed": "node C:\\Users\\visha\\quizmaster\\server\\src\\seed\\seed.js",
-    "server:dev": "npm --prefix server run dev",
-    "server:seed": "npm --prefix server run seed"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seed/seed.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
